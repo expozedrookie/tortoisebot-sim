@@ -67,7 +67,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='box'>
-      <pose>-9.4594259262084961 -0.0053153699263930321 0.5 0 0 0</pose>
+      <pose>-9.4594259993357479 -0.0053163772563710847 0.4999985238240463 4.0695340872622505e-09 -1.5627988064326497e-09 -5.447540433571092e-07</pose>
       <link name='box_link'>
         <inertial>
           <inertia>
@@ -114,7 +114,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='box_1'>
-      <pose>10.010098457336426 -0.024525599554181099 0.5 0 0 0</pose>
+      <pose>10.010098457361368 -0.024525592237138016 0.49999898388861524 -2.09479598487766e-09 2.7544486696949676e-11 -3.4293713487470436e-09</pose>
       <link name='box_link'>
         <inertial>
           <inertia>
@@ -161,7 +161,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='box_0'>
-      <pose>0.25974050164222717 -10.51099967956543 0.5 0 0 0</pose>
+      <pose>0.26008102139664108 -10.518118592279265 0.49999844939441035 2.1634120165367241e-13 -1.0894862418998066e-14 -0.00081044626992132784</pose>
       <link name='box_link'>
         <inertial>
           <inertia>
@@ -208,7 +208,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='box_0_1'>
-      <pose>0.29270714580759716 10.475605625181856 0.5 0 0 0</pose>
+      <pose>0.29227738430911226 10.490686040687459 0.49999844939440996 -6.6912725729625319e-10 -1.0950227686831867e-14 -0.00090462892227734292</pose>
       <link name='box_link'>
         <inertial>
           <inertia>
@@ -255,7 +255,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='sphere'>
-      <pose>-6.5892213179504981 7.3925532917590182 0.5 0 0 0</pose>
+      <pose>-6.5892213179504981 7.3925532917590182 0.499999999902001 0 0 0</pose>
       <link name='sphere_link'>
         <inertial>
           <inertia>
@@ -302,7 +302,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='cone'>
-      <pose>-6.5174929750924733 -7.478343035799643 0.5 0 0 0</pose>
+      <pose>-6.5174929754781328 -7.478343035799643 0.49999999993296756 5.2544591086068952e-17 -7.7132841037290368e-10 -3.4184866375544543e-23</pose>
       <link name='cone_link'>
         <inertial>
           <inertia>
@@ -351,7 +351,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='cylinder'>
-      <pose>6.4271793365478516 8.1085596084594727 0.5 0 0 0</pose>
+      <pose>6.4271793365478516 8.1085596084594727 0.49999942638036005 5.4601880048465833e-20 3.1919792858961256e-21 -9.8012861475681596e-21</pose>
       <link name='cylinder_link'>
         <inertial>
           <inertia>
@@ -400,7 +400,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='capsule'>
-      <pose>7.3778877525841295 -7.9319856891186049 0.5 0 0 0</pose>
+      <pose>7.3778877525841295 -7.9319856891186049 0.499999999902001 0 0 0</pose>
       <link name='capsule_link'>
         <inertial>
           <inertia>
@@ -449,7 +449,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='ellipsoid'>
-      <pose>0.1703445887339079 3.7075076589077889 0.5 0 0 0</pose>
+      <pose>-0.37535446263093064 3.4595779280796166 0.18666843612397943 1.5707963027060894 -1.3774877890188371 -0.97946978775295745</pose>
       <link name='ellipsoid_link'>
         <inertial>
           <inertia>
@@ -496,7 +496,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='box_2'>
-      <pose>-3.4584967584220525 -3.4541447679650936 0.5 0 0 0</pose>
+      <pose>-3.4584967584220525 -3.4541447679650936 0.49999999990199806 6.2287739151293738e-22 9.3279666454713669e-22 -3.6315533669320137e-22</pose>
       <link name='box_link'>
         <inertial>
           <inertia>
@@ -1008,11 +1008,11 @@
         <pose>0 0 0 0 0 0</pose>
         <enable_wind>false</enable_wind>
       </link>
-      <pose>-4.4214643308136363 2.6471157709907063 0 0 0 0</pose>
+      <pose>-4.4214643308136363 2.6471157709907063 -6.2214052396182325e-07 1.2458304541984228e-18 -3.9733640877967459e-19 -3.8560842939870291e-21</pose>
       <self_collide>false</self_collide>
     </model>
     <model name='cone_0'>
-      <pose>0.51075247365308929 -6.5196903847927912 0.5 0 0 0</pose>
+      <pose>0.51076106886867578 -6.5196817741972986 1.4999999955609971 6.4665559658036358e-08 -7.4989935400141925e-08 -6.4222928487554069e-09</pose>
       <link name='cone_link'>
         <inertial>
           <inertia>
@@ -1047,6 +1047,53 @@
               <radius>2</radius>
               <length>3</length>
             </cone>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='box_3'>
+      <pose>0.63402688609410973 9.4899248073493201 0.49999999020363756 1.2609107930597929e-08 -2.5454609022228387e-11 4.5324912323087504e-07</pose>
+      <link name='box_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.16666</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.16666</iyy>
+            <iyz>0</iyz>
+            <izz>0.16666</izz>
+          </inertia>
+          <mass>1</mass>
+          <pose>0 0 0 0 0 0</pose>
+        </inertial>
+        <collision name='box_collision'>
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='box_visual'>
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
           </geometry>
           <material>
             <ambient>0.300000012 0.300000012 0.300000012 1</ambient>

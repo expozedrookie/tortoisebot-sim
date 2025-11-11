@@ -16,7 +16,7 @@ def generate_launch_description():
     world_path=LaunchConfiguration('world_path', default=PathJoinSubstitution([
         FindPackageShare('tortoisebot_gazebo'), 'worlds', 'empty_world.sdf'
     ]))
-    rviz_config=LaunchConfiguration('rviz_file', default=PathJoinSubstitution([FindPackageShare('tortoisebot_description').find('tortoisebot_description'),'config', 'rviz.rviz']))
+    rviz_config=LaunchConfiguration('rviz_file', default=PathJoinSubstitution([FindPackageShare('tortoisebot_description'),'config', 'rviz.rviz']))
     
     bridge_params=os.path.join(FindPackageShare('tortoisebot_gazebo').find('tortoisebot_gazebo'),'config','bridge_parameters.yaml')
     
@@ -46,6 +46,7 @@ def generate_launch_description():
             '-name', 'tortoisebot',
             #'-t','robot_description',
             '-file', urdf_path,
+            '-x','0','-y','0',
             '-z', '2'
             ],
             output='screen'

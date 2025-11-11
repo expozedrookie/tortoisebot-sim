@@ -22,7 +22,7 @@ def generate_launch_description():
     
     world_path=PathJoinSubstitution([FindPackageShare('tortoisebot_gazebo'),'worlds', world_file])
 
-    rviz_config=LaunchConfiguration('rviz_file', default=PathJoinSubstitution([FindPackageShare('tortoisebot_description').find('tortoisebot_description'),'config', 'rviz_task4.rviz']))
+    rviz_config=LaunchConfiguration('rviz_file', default=PathJoinSubstitution([FindPackageShare('tortoisebot_description'),'config', 'rviz_Task4.rviz']))
     
     gazebo_rviz_launch_file=IncludeLaunchDescription( PathJoinSubstitution([FindPackageShare('tortoisebot_gazebo'),'launch','gazebo_launch.py']),launch_arguments={'urdf_path':urdf_path,'world_path':world_path,'rviz_file':rviz_config}.items())
 
@@ -32,7 +32,7 @@ def generate_launch_description():
     return LaunchDescription([
         
         gazebo_rviz_launch_file,
-        #slam_launch,
+        slam_launch,
         
 
     ])

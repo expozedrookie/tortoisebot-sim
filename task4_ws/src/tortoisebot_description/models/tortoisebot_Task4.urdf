@@ -155,7 +155,7 @@
   <joint name="base_joint" type="fixed">
     <parent link="base_footprint"/>
     <child link="base_link"/>
-    <origin xyz="0.0 0.0 0.09" rpy="0 0 0"/>
+    <origin xyz="0.0 0.0 0.00" rpy="0 0 0"/>
   </joint>
 
 
@@ -171,12 +171,13 @@
 <topic>cmd_vel</topic>
 <tf_topic>/tf</tf_topic>
 <publish_odom_tf>true</publish_odom_tf>
-<odom_topic>odom</odom_topic>
+<odom_topic>/odom</odom_topic>
 <frame_id>odom</frame_id>
 <child_frame_id>base_footprint</child_frame_id>
 <odom_publisher_frequency>30</odom_publisher_frequency>
 
 </plugin>
+
 <plugin filename="gz-sim-joint-state-publisher-system" name="gz::sim::systems::JointStatePublisher">
 <topic>joint_states</topic>
 <joint_name>left_wheel_joint</joint_name>
