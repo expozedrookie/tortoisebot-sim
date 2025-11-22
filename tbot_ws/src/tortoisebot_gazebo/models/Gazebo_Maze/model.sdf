@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="Gazebo_Maze">
+    <static>true</static>
+
+    <link name="link">
+
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>file://home/arz-1013/tbot_ws/src/tortoisebot_gazebo/models/Gazebo_Maze/meshes/Gazebo_Wall_world.stl</uri>
+            <scale>2 2 2</scale>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>file://home/arz-1013/tbot_ws/src/tortoisebot_gazebo/models/Gazebo_Maze/meshes/Gazebo_Wall_world.stl</uri>
+            <scale>2 2 2</scale>
+          </mesh>
+        </geometry>
+      </collision>
+
+    </link>
+  </model>
+</sdf>
+
