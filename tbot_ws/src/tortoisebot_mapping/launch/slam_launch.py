@@ -10,7 +10,7 @@ from launch.conditions import UnlessCondition,IfCondition
 
 
 def generate_launch_description():
-    map_file_name=LaunchConfiguration('map_file_name', default='')
+    # map_file_name=LaunchConfiguration('map_file_name', default='')
     localize=LaunchConfiguration('localize', default='false')
     sync_mapping=LaunchConfiguration('sync_mapping', default='false')
 
@@ -30,7 +30,7 @@ def generate_launch_description():
     world_file=LaunchConfiguration('world_file', default='custom_world.world.sdf')
     world_path=LaunchConfiguration('world_path', default=PathJoinSubstitution([FindPackageShare('tortoisebot_gazebo').find('tortoisebot_gazebo'),'worlds', world_file]))
     
-    rviz_config=LaunchConfiguration('rviz_file', default=PathJoinSubstitution([FindPackageShare('tortoisebot_description'),'config', 'rviz_Task4.rviz']))
+    rviz_config=LaunchConfiguration('rviz_file', default=PathJoinSubstitution([FindPackageShare('tortoisebot_description'),'config', 'rviz_task4.rviz']))
     
     gazebo_rviz_launch_file=IncludeLaunchDescription( PathJoinSubstitution([FindPackageShare('tortoisebot_gazebo'),'launch','gazebo_launch.py']),launch_arguments={'urdf_path':urdf_path,'world_path':world_path,'rviz_file':rviz_config,'bridge_param_file':bridge_param_file}.items())
     

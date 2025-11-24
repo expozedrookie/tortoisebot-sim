@@ -9,7 +9,7 @@
         <geometry>
           <mesh>
             <uri>file://home/arz-1013/tbot_ws/src/tortoisebot_gazebo/models/Gazebo_Maze/meshes/Gazebo_Wall_world.stl</uri>
-            <scale>2 2 2</scale>
+            <scale>3 3 0.250</scale>
           </mesh>
         </geometry>
       </visual>
@@ -18,7 +18,7 @@
         <geometry>
           <mesh>
             <uri>file://home/arz-1013/tbot_ws/src/tortoisebot_gazebo/models/Gazebo_Maze/meshes/Gazebo_Wall_world.stl</uri>
-            <scale>2 2 2</scale>
+            <scale>3 3 0.25</scale>
           </mesh>
         </geometry>
       </collision>
@@ -26,4 +26,3 @@
     </link>
   </model>
 </sdf>
-
