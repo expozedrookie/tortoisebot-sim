@@ -8,8 +8,10 @@ def generate_launch_description():
 	 # use_sim_time = true for using gazebo time when simulating .
 	use_sim_time=LaunchConfiguration('use_sim_time',default='false')
 
-	# urdf_path = path\to\your\urdf for visualizing any other URDF .
-	urdf_content=LaunchConfiguration('urdf_path', default=FileContent(PathJoinSubstitution([FindPackageShare('tortoisebot_description'),'models', 'tortoisebot.urdf'])))
+	# urdf_path = path to the urdf for visualizing any URDF .
+	urdf_path=LaunchConfiguration('urdf_path', default=PathJoinSubstitution([FindPackageShare('tortoisebot_description'),'models', 'tortoisebot.urdf']))
+	#
+	urdf_content=FileContent(urdf_path)
 	# default rviz configuration file - for just showing robot model and TF
 	rviz_config_location=PathJoinSubstitution([FindPackageShare('tortoisebot_description'),'config','rviz.rviz'])
 
