@@ -1,15 +1,12 @@
 # tortoisebot-sim-tasks
 The goal of this project is to build a solid understanding of core ROS 2 principles (nodes, topics, launch files, custom packages) and their application in a realistic, simulated environment.
 
-**FINAL UPDATED CODE**
-- cd ``tbot_ws``
-- ``colcon build``
-- ``source install/setup.bash``
-
 **Common Setup**
-- Go to task<number>_ws directory -``cd task<number>_ws``
+
+- Go to tbot_ws directory -``cd tbot_ws``
 - Build the workspace             - ``colcon build``
 - Source the workspace            - ``source install/setup.bash``
+- - ``ros2 launch tortoisebot_bringup task.launch.py task_id:=<task_number>``
 
 **Task 1 - Simulate tortoisebot.urdf in Gazebo and run it using Teleop**
 - RViz only launch   - ``ros2 launch tortoisebot_description rviz_launch.py ``

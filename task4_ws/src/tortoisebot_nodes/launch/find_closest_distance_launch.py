@@ -17,9 +17,9 @@ def generate_launch_description():
     # argument for path to the urdf file
     urdf_path=LaunchConfiguration('urdf_path', default=PathJoinSubstitution([FindPackageShare('tortoisebot_description'),'models', urdf_file]))
     # argument for name to the world file
-    world_file=LaunchConfiguration('urdf_file', default='square_world.sdf')
+    world_file=LaunchConfiguration('world_file', default='square_world.sdf')
     # argument for path to the world file
-    world_path=LaunchConfiguration('urdf_path', default=PathJoinSubstitution([FindPackageShare('tortoisebot_gazebo'),'worlds', world_file]))
+    world_path=LaunchConfiguration('world_path', default=PathJoinSubstitution([FindPackageShare('tortoisebot_gazebo'),'worlds', world_file]))
     # rviz_file = argument for name to the rviz configuration file
     rviz_file=LaunchConfiguration('rviz_file', default='rviz_task2.rviz')
     # rviz_config = argument for path to the rviz configuration file
