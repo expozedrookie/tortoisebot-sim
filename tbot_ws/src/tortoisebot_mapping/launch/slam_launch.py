@@ -10,29 +10,31 @@ from launch.conditions import UnlessCondition,IfCondition
 
 
 def generate_launch_description():
-    # map_file_name=LaunchConfiguration('map_file_name', default='')
+    # argument for only enabling localization
     localize=LaunchConfiguration('localize', default='false')
+    # argument for enabling sync mapping in slam_toolbox
     sync_mapping=LaunchConfiguration('sync_mapping', default='false')
-
+    # argument for choosing urdf file (name)
     urdf_file=LaunchConfiguration('urdf_file', default='tortoisebot_Task4.urdf')
-    
-
+    # argument for choosing urdf file (path)
     urdf_path=LaunchConfiguration('urdf_path', default=PathJoinSubstitution([FindPackageShare('tortoisebot_description'),'models', urdf_file]))
-    
+    # argument for slam parameter file for any process -async mapping, sync mapping or localization - following three arguments
     sync_params_file=LaunchConfiguration('slam_params_file', default=PathJoinSubstitution([FindPackageShare('tortoisebot_mapping').find('tortoisebot_mapping'),'config', 'sync_map_config.yaml']))
-
     localize_params_file=LaunchConfiguration('slam_params_file', default=PathJoinSubstitution([FindPackageShare('tortoisebot_mapping').find('tortoisebot_mapping'),'config', 'localize_config.yaml']))
-
     async_params_file=LaunchConfiguration('slam_params_file', default=PathJoinSubstitution([FindPackageShare('tortoisebot_mapping').find('tortoisebot_mapping'),'config', 'async_map_config.yaml']))
-    
+    # argument for bridge file (name)
     bridge_param_file=LaunchConfiguration('bridge_param_file', default='mapping_bridge.yaml')
-
+    # argument for world_file name
     world_file=LaunchConfiguration('world_file', default='custom_world.world.sdf')
+    # argument for world file path
     world_path=LaunchConfiguration('world_path', default=PathJoinSubstitution([FindPackageShare('tortoisebot_gazebo').find('tortoisebot_gazebo'),'worlds', world_file]))
+    # argument for world_file name
+    rviz_file=LaunchConfiguration('rviz_file', default='rviz_task4.rviz')
+    # argument for rviz_config path
+    rviz_config=LaunchConfiguration('rviz_file_path', default=PathJoinSubstitution([FindPackageShare('tortoisebot_description'),'config', rviz_file]))
     
-    rviz_config=LaunchConfiguration('rviz_file', default=PathJoinSubstitution([FindPackageShare('tortoisebot_description'),'config', 'rviz_task4.rviz']))
-    
-    gazebo_rviz_launch_file=IncludeLaunchDescription( PathJoinSubstitution([FindPackageShare('tortoisebot_gazebo'),'launch','gazebo_launch.py']),launch_arguments={'urdf_path':urdf_path,'world_path':world_path,'rviz_file':rviz_config,'bridge_param_file':bridge_param_file}.items())
+    #Start Gazebo + Rviz Launch file
+    gazebo_rviz_launch_file=IncludeLaunchDescription( PathJoinSubstitution([FindPackageShare('tortoisebot_gazebo'),'launch','gazebo_launch.py']),launch_arguments={'urdf_path':urdf_path,'world_path':world_path,'rviz_file_path':rviz_config,'bridge_param_file':bridge_param_file}.items())
     
     # RUN IF LOCALIZE IS TRUE    
     slam_localization_launch = IncludeLaunchDescription( PathJoinSubstitution([FindPackageShare('slam_toolbox'),'launch','localization_launch.py']),launch_arguments={'slam_params_file':localize_params_file,'use_sim_time':'true'}.items(),condition=IfCondition(localize))
