@@ -13,7 +13,7 @@ def generate_launch_description():
     # urdf_path = path of the urdf can be dynamically given when launching this file
     urdf_path=LaunchConfiguration('urdf_path', default=PathJoinSubstitution([FindPackageShare('tortoisebot_description'),'models', 'tortoisebot.urdf']))
     # world_location = path to the world file as per task= empty_world.sdf
-    world_location = PathJoinSubstitution([FindPackageShare('tortoisebot_gazebo'), 'worlds', 'empty_world.sdf'])
+    world_location=PathJoinSubstitution([FindPackageShare('tortoisebot_gazebo'), 'worlds', 'empty_world.sdf'])
     # bridge_params = path to the bridge file for bridging topics ROS <-> GZ
     bridge_params=os.path.join(FindPackageShare('tortoisebot_gazebo').find('tortoisebot_gazebo'),'config','bridge_parameters.yaml')
     
@@ -30,8 +30,7 @@ def generate_launch_description():
             'gz_args':['-r ',world_location],
             'on_exit_shutdown':'true'
             }.items()
-    )
-
+            )
     # Spawn the robot model using create node in ros_gz_sim package
     create_entity =Node(
         package='ros_gz_sim',
@@ -51,16 +50,12 @@ def generate_launch_description():
 		executable='parameter_bridge',
 		arguments=[
             '--ros-args','-p', f'config_file:={bridge_params}' #bridge config file
-            ],
-            output='screen'
+            ],output='screen'
             )
     # start rviz launch file from
     rviz_launch_file=IncludeLaunchDescription(
-        PathJoinSubstitution([
-            FindPackageShare('tortoisebot_description'),
-			'launch',
-			'rviz_launch.py',
-			]),launch_arguments={'use_sim_time':use_sim_time,'urdf_path':urdf_path}.items()) # urdf path given as argument
+        PathJoinSubstitution([FindPackageShare('tortoisebot_description'),'launch','rviz_launch.py']),
+        launch_arguments={'use_sim_time':use_sim_time,'urdf_path':urdf_path}.items()) # urdf path given as argument
 
     return LaunchDescription([
         start_gazebo_world,
