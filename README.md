@@ -18,4 +18,9 @@ The goal of this project is to build a solid understanding of core ROS 2 princip
 
 **Task 3 - Follow a Ball Shaped Object**
 - Get to the closest object - ``ros2 launch tortoisebot_nodes ball_follower_launch.py `` (Initial Version)
-- Follow the ball - ``ros2 launch tortoisebot_nodes moving_sphere_launch.py `` 
+- Follow the ball - ``ros2 launch tortoisebot_nodes moving_sphere_launch.py ``
+
+**Task 4 - Map a Custom World**
+- Map Using Online Async mode - ``ros2 launch tortoisebot_mapping slam_launch.py``
+- Map using Online Sync mode  - ``ros2 launch tortoisebot_mapping slam_launch.py sync_mapping:=true``
+- Localize                    - ``ros2 launch tortoisebot_mapping slam_launch.py localize:=true``
