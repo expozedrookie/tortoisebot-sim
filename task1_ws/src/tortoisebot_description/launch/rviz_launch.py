@@ -23,7 +23,7 @@ def generate_launch_description():
 		arguments=['-d',rviz_config_location], # -d = Load Custom RViz Configuration File
 		output='screen' # output prints in terminal else goes to log
 	)
-	# Robot State Publisher Node
+	# Robot State Publisher Node 
 	start_rsp=Node(
 		package='robot_state_publisher',
 		executable='robot_state_publisher',
