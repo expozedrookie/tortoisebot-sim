@@ -6,6 +6,10 @@
     <link name="link">
 
       <visual name="visual">
+      <material>
+      <emissive>1 0.2 0 1</emissive>
+      <diffuse>1 0.2 0 1</diffuse>
+      </material>
         <geometry>
           <mesh>
             <uri>file://home/arz-1013/tbot_ws/src/tortoisebot_gazebo/models/Gazebo_Maze/meshes/Gazebo_Wall_world.stl</uri>
